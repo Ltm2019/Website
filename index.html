@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke McGraw | Cyber Security Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #010101;
+            color: #eaeaea;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: rgba(0,0,0,0.8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4da3ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ccc;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #4da3ff;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 120px 0;
+            background:
+                linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("assets/img/hero.jpg") center/cover no-repeat;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4da3ff;
+            color: #000;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .cta-button:hover {
+            background-color: #6cb6ff;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #4da3ff;
+        }
+
+        /* ABOUT */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #222;
+        }
+
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #4da3ff;
+        }
+
+        /* PROJECTS */
+        .counter-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .counter-item h3 {
+            font-size: 42px;
+            color: #4da3ff;
+        }
+
+        /* EXPERIENCE */
+        .testimonial {
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #222;
+        }
+
+        .testimonial-text {
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #4da3ff;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #000;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 15px;
+            color: #4da3ff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #000;
+                position: absolute;
+                width: 100%;
+                top: 100%;
+                left: 0;
+                padding: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">LM</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="mobile-menu">☰</div>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="container">
+        <h1>Luke McGraw</h1>
+        <p>
+            Computer Science student specializing in Cyber Security at Salisbury University.
+            CompTIA Security+ Certified • Eagle Scout • GPA 3.5
+        </p>
+        <a href="#experience" class="cta-button">View Experience</a>
+        <a href="assets/resume/Luke_McGraw_Resume.pdf" class="cta-button" target="_blank">Download Resume</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Cyber Security</h3>
+                <p>Strong foundation in cybersecurity principles, secure systems, and user-focused technical support.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>IT & Automation</h3>
+                <p>Experience maintaining systems, automating workflows with PowerShell, and managing SharePoint solutions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Leadership</h3>
+                <p>Eagle Scout with proven leadership, organization, and instructional experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Technical Highlights</h2>
+        <div class="counter-container">
+            <div class="counter-item">
+                <h3>300+</h3>
+                <p>Users Supported</p>
+            </div>
+            <div class="counter-item">
+                <h3>IT</h3>
+                <p>Systems & Inventory</p>
+            </div>
+            <div class="counter-item">
+                <h3>PS</h3>
+                <p>PowerShell Automation</p>
+            </div>
+            <div class="counter-item">
+                <h3>Web</h3>
+                <p>Responsive Dashboards</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="testimonial">
+            <p class="testimonial-text">
+                Maintained hardware and software inventory, supported 300+ clients,
+                automated workflows using PowerShell and Infowise, and built modern SharePoint dashboards.
+            </p>
+            <p class="testimonial-author">IT / Technical Support</p>
+        </div>
+
+        <div class="testimonial">
+            <p class="testimonial-text">
+                Ensured pool safety, logged chemical readings, prevented safety violations,
+                and designed instructional swim curricula for diverse age groups.
+            </p>
+            <p class="testimonial-author">Lifeguard & Swim Instructor</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p>Email: lmcgraw556@gmail.com</p>
+                <p>Phone: 443-991-0166</p>
+                <p>Location: Jarrettsville, MD</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Luke McGraw
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.querySelector('.mobile-menu').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
